@@ -1,0 +1,2 @@
+module RemdesivirHelper
+end
