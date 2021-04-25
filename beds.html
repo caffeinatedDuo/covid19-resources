@@ -54,5 +54,25 @@
   </nav>
   <img src="resources/images/beds.jpg" alt="" srcset="">
   <img src="resources/images/beds-2.jpg" alt="" srcset="">
+  <script src="https://www.gstatic.com/firebasejs/8.4.2/firebase-app.js"></script>
+  
+  <script src="https://www.gstatic.com/firebasejs/8.4.2/firebase-analytics.js"></script>
+  
+  <script>
+    // Your web app's Firebase configuration
+    // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+    var firebaseConfig = {
+      apiKey: "AIzaSyB0iSPRHLUijC2QiTgkshmRuyCer6TpeIQ",
+      authDomain: "covid19-resources-india.firebaseapp.com",
+      projectId: "covid19-resources-india",
+      storageBucket: "covid19-resources-india.appspot.com",
+      messagingSenderId: "59127555606",
+      appId: "1:59127555606:web:19ae470402b2a16f1df737",
+      measurementId: "G-T28CVYLXLC"
+    };
+    // Initialize Firebase
+    firebase.initializeApp(firebaseConfig);
+    firebase.analytics();
+  </script>
 </body>
 </html>

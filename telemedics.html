@@ -42,7 +42,7 @@
           <a class="nav-link" href="/beds.html">Beds</a>
         </li>
         <li class="nav-item active">
-            <a class="nav-link" href="/telemedics.html">Telemedics Doctor</a>
+          <a class="nav-link" href="/telemedics.html">Telemedics Doctor</a>
         </li>
         <li class="nav-item">
           <a class="nav-link" href="/oxygen.html">Oxygen</a>
@@ -57,8 +57,28 @@
     </div>
   </nav>
   <div class="center">
-      <h1 class="mt-5">List of Telemedics Doctor available</h1>
-      <iframe class="mt-3" src="https://docs.google.com/spreadsheets/d/e/2PACX-1vR18oTVjACvuOlbhU8oj0U-ySaRazM07E-m43YC0qwKl7Xpo1twSQb2e6bsRFjxBnMsVry2eyC7es-o/pubhtml?gid=434934066&amp;single=true&amp;widget=true&amp;headers=false"></iframe>
+    <h1 class="mt-5">List of Telemedics Doctor available</h1>
+    <iframe class="mt-3" src="https://docs.google.com/spreadsheets/d/e/2PACX-1vR18oTVjACvuOlbhU8oj0U-ySaRazM07E-m43YC0qwKl7Xpo1twSQb2e6bsRFjxBnMsVry2eyC7es-o/pubhtml?gid=434934066&amp;single=true&amp;widget=true&amp;headers=false"></iframe>
   </div>
+  <script src="https://www.gstatic.com/firebasejs/8.4.2/firebase-app.js"></script>
+  
+  <script src="https://www.gstatic.com/firebasejs/8.4.2/firebase-analytics.js"></script>
+  
+  <script>
+    // Your web app's Firebase configuration
+    // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+    var firebaseConfig = {
+      apiKey: "AIzaSyB0iSPRHLUijC2QiTgkshmRuyCer6TpeIQ",
+      authDomain: "covid19-resources-india.firebaseapp.com",
+      projectId: "covid19-resources-india",
+      storageBucket: "covid19-resources-india.appspot.com",
+      messagingSenderId: "59127555606",
+      appId: "1:59127555606:web:19ae470402b2a16f1df737",
+      measurementId: "G-T28CVYLXLC"
+    };
+    // Initialize Firebase
+    firebase.initializeApp(firebaseConfig);
+    firebase.analytics();
+  </script>
 </body>
 </html>
