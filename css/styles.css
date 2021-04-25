@@ -1,0 +1,13 @@
+.center {
+    display: flex;
+    max-width: 1400px;
+    height: 100%;
+    flex-direction: column;
+    justify-content: center;
+}
+iframe {
+    width: 1024px;
+    height: 700px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
