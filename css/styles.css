@@ -4,6 +4,8 @@
     height: 100%;
     flex-direction: column;
     justify-content: center;
+    align-items: center;
+    margin: 0 auto;
 }
 iframe {
     width: 1024px;
