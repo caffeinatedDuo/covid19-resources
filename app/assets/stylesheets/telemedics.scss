@@ -1,6 +1,9 @@
 // Place all the styles related to the telemedics controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: https://sass-lang.com/
+
+$small: 640px;
+
 .center {
     display: flex;
     max-width: 1400px;
@@ -15,4 +18,9 @@ iframe {
     height: 700px;
     border: 1px solid #ccc;
     border-radius: 5px;
+
+    @media screen and (max-width: $small) {
+        width: 95%;
+        margin: 0 20px;
+    }
 }
