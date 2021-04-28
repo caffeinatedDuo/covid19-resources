@@ -29,25 +29,28 @@
     
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
       <ul class="navbar-nav mr-auto">
-        <li class="nav-item active">
+        <li class="<%= 'active' if current_page?(root_path) %>">
           <a class="nav-link" href="/">Home <span class="sr-only">(current)</span></a>
         </li>
-        <li class="nav-item">
-          <a class="nav-link" href="/remdisivir">Remdisivir</a>
+        <li class="<%= 'active' if current_page?(doctors_path) %>">
+          <a class="nav-link" href="/doctors">Doctors</a>
         </li>
-        <li class="nav-item">
-          <a class="nav-link" href="/beds">Beds</a>
-        </li>
-        <li class="nav-item">
+        <li class="<%= 'active' if current_page?(telemedics_path) %>">
           <a class="nav-link" href="/telemedics">Telemedics Doctor</a>
         </li>
-        <li class="nav-item">
-          <a class="nav-link" href="/oxygen">Oxygen</a>
+        <li class="<%= 'active' if current_page?(oxygen_path) %>">
+          <a class="nav-link" href="/oxygen">Oxygen Suppliers</a>
         </li>
-        <li class="nav-item">
+        <li class="<%= 'active' if current_page?(oxygen_dealers_path) %>">
+          <a class="nav-link" href="/oxygen-dealers">Oxygen Dealers</a>
+        </li>
+        <li class="<%= 'active' if current_page?(beds_path) %>">
+          <a class="nav-link" href="/beds">Beds</a>
+        </li>
+        <li class="<%= 'active' if current_page?(plasma_path) %>">
           <a class="nav-link" href="/plasma">Plasma</a>
         </li>
-        <li class="nav-item">
+        <li class="<%= 'active' if current_page?(other_path) %>">
           <a class="nav-link" href="/other">Other Useful Links</a>
         </li>
       </ul>
@@ -55,6 +58,9 @@
   </nav>
   <body>
     <%= yield %>
+    <footer class="footer">
+      <p class="m-0">Made with <span class="heart">♥</span> in India</p>
+    </footer>
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
     
