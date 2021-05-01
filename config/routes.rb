@@ -12,4 +12,5 @@ Rails.application.routes.draw do
   get "telemedics", to: "telemedics#index"
   get "plasma", to: "plasma#index"
   get "other", to: "home#other"
+  get "about-us", to: "home#aboutus"
 end

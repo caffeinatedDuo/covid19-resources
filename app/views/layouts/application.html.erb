@@ -1,11 +1,11 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Covid19Resources</title>
+    <title>TeleCov</title>
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <meta property="og:title" content="COVID19 Resources India">
     <meta property="og:description" content="List of all the doctors,telemedics,oxygen related data. Please share forward to help someone in need ">
-    <meta property="og:image" content="https://i.ibb.co/T82d6jG/image-1.jpg">
+    <meta property="og:image" content="https://i.ibb.co/T82d6jG/image-1.png">
     <meta property="og:url" content="https://covid19-resources-india.herokuapp.com/">
     <meta name="twitter:title" content="COVID19 Resources India ">
     <meta name="twitter:description" content="List of all the doctors,telemedics,oxygen related data. Please share forward to help someone in need ">
@@ -19,7 +19,7 @@
     <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <!-- Global site tag (gtag.js) - Google Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-CVJ4C31TYQ"></script>
     <script>
@@ -31,7 +31,7 @@
     </script>
   </head>
   <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
-    <a class="navbar-brand" href="/">COVID19 Resources India</a>
+    <a class="navbar-brand" href="/">Tele Cov</a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
@@ -61,6 +61,9 @@
         </li>
         <li class="<%= 'active' if current_page?(other_path) %>">
           <a class="nav-link" href="/other">Other Useful Links</a>
+        </li>
+        <li>
+          <a class="nav-link" href="/about-us">About Us</a>
         </li>
       </ul>
     </div>

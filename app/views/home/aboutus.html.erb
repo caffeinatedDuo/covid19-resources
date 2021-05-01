@@ -1,0 +1,73 @@
+<div class="center">
+    <h1 class="mt-5 mx-3">About Us</h1>
+    <div class="aboutus-content">
+        <p>
+            With Covid-19's second wave creating havoc in India and people dying in record numbers, there are many good Samaritans who are either offering their help over social media or phone.
+            <br><br>
+            We are a group of 4 enthusiastic engineers and lawyers in their 20s, who are trying to bring those people under one umbrella via this website. 
+            <br><br>
+            Tele-cov will provide a list of telemedicine doctors all over India, Nutritionist, psychlogists, resource volunteers who will search for your needs with regard to oxygen cylinders, available beds, medicines for free. 
+            <br><br>
+            This is a voluntary effort put together via crowdsourced information in order to contribute a little in the crisis that India is facing. 
+            
+            Please bear in mind that the attempt to aggregate scattered information from internet and links to other organisations' website is in no way to take credit from those people/institutions.
+            <br><br>
+            Let's all hang in there and pull each other up.
+        </p>
+        <br><br>
+        <div class="button-wrapper">
+            <span class="profile-wrapper">
+                <%= image_tag("abhishek.jpg", class: "avatar", alt: "Abhishek Jha",) %>
+                <label>Abhishek Jha</label>
+            </span>
+            <span class="profile-wrapper">
+                <%= image_tag("tanuja.jpg", class: "avatar", alt: "Tanuja Tridib",) %>
+                <label>Tanuja Tridib</label>
+            </span>
+            <span class="profile-wrapper">
+                <%= image_tag("sahil.jpg", class: "avatar", alt: "Sahil Likhar",) %>
+                <label>Sahil Likhar</label>
+            </span>
+            <span class="profile-wrapper">
+                <%= image_tag("jain.jpg", class: "avatar", alt: "Abhishek Jain",) %>
+                <label>Abhishek Jain</label>
+            </span>
+        </div>
+        <br><br>
+        <p>
+            <b>Disclaimer :</b> <br><br>Kindly bear in mind that this is a collection of crowdsourced information and not an assurance of guaranteed medical help. The people mentioned in the website might be unavailable due to personal reasons. We are not liable for any unfortunate incident caused during the course of your interaction with the concerned person/entity.
+        </p>
+        <br><br>
+        <p>
+            <b>Acknowledgements :</b> <br><br>We would like to thank each and everyone who helped us in putting Telecov together - Animesh Sarma, Sourabh Gogoi, Smita Nair, Aarti Gosavi, Tridip Sarma.
+        </p>
+        <br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+    </div>
+</div>
+<style>
+    .aboutus-content {
+        max-width:600px;
+        margin-top:30px;
+    }
+    .footer {
+        position:fixed;
+        bottom:0;
+    }
+    .avatar {
+        vertical-align: middle;
+        width: 90px;
+        height: 90px;
+        border-radius: 50%;
+        object-fit:cover;
+    }
+    .profile-wrapper {
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        align-items: center;
+        row-gap: 10px;
+    }
+    .button-wrapper {
+        max-width: 450px;
+    }
+</style>

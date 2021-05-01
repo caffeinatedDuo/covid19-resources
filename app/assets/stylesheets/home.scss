@@ -33,8 +33,27 @@ ul.custom >:last-child {padding-bottom: 24px !important;}
     align-items: center;
     justify-content: center;
 }
+.contacts-wrapper {
+    display: flex;
+    max-width: 620px;
+    flex-wrap: wrap;
+    margin: 0 auto;
+    row-gap: 22px;
+    column-gap: 10px;
+    align-items: center;
+    justify-content: center;
+}
 .resource-button {
     width: 180px;
+}
+.about-button {
+    justify-self: center;
+    margin: 0 auto;
+    align-items: center;
+    display: flex !important;
+    text-align: center;
+    justify-content: center;
+    width: 330px;
 }
 .caption-highlight {
     background-color: #ccc;
@@ -42,4 +61,45 @@ ul.custom >:last-child {padding-bottom: 24px !important;}
     width: 250px;
     opacity: 0.8;
     margin: 0 auto;
+}
+
+
+.card {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    max-width: 300px;
+    min-width: 300px !important;
+    min-height: 300px !important;
+    margin: auto;
+    text-align: center;
+    border-radius: 15px !important;
+    padding: 10px !important;
+    justify-content: center;
+}
+
+.title {
+    color: grey;
+    font-size: 18px;
+}
+
+.card-button {
+    border: none;
+    outline: 0;
+    display: inline-block;
+    padding: 8px;
+    color: white;
+    background-color: #000;
+    text-align: center;
+    cursor: pointer;
+    width: 100%;
+    font-size: 18px;
+}
+
+.card-link {
+    text-decoration: none;
+    font-size: 22px;
+    color: black;
+}
+
+.card-button:hover, .card-link:hover {
+    opacity: 0.7;
 }
