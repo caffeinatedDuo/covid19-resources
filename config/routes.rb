@@ -13,5 +13,4 @@ Rails.application.routes.draw do
   get "plasma", to: "plasma#index"
   get "other", to: "home#other"
   get "about-us", to: "home#aboutus"
-  get ".well-known/acme-challenge/ciWkGZE6IP4qEPI222t-Cxps1fJnOIAKwgMXFaX_v8Y", "public/ciWkGZE6IP4qEPI222t-Cxps1fJnOIAKwgMXFaX_v8Y"
 end
