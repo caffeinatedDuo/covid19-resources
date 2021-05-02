@@ -25,13 +25,20 @@ ul.custom >:last-child {padding-bottom: 24px !important;}
 }
 .button-wrapper {
     display: flex;
-    max-width: 400px;
+    max-width: 420px;
     flex-wrap: wrap;
     margin: 0 auto;
     row-gap: 22px;
     column-gap: 22px;
     align-items: center;
     justify-content: center;
+}
+.intro-wrapper {
+    max-width: 550px;
+    text-align: center;
+    margin: 0 auto;
+    font-weight: bold;
+    font-size: larger;
 }
 .contacts-wrapper {
     display: flex;
@@ -44,7 +51,7 @@ ul.custom >:last-child {padding-bottom: 24px !important;}
     justify-content: center;
 }
 .resource-button {
-    width: 180px;
+    width: 190px;
 }
 .about-button {
     justify-self: center;
@@ -53,7 +60,7 @@ ul.custom >:last-child {padding-bottom: 24px !important;}
     display: flex !important;
     text-align: center;
     justify-content: center;
-    width: 330px;
+    width: 120px;
 }
 .caption-highlight {
     background-color: #ccc;
