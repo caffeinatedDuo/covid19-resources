@@ -2,3 +2,8 @@
     <h1 class="mt-5 mx-3">List of Tele Pshychologists available</h1>
     <iframe src="https://docs.google.com/spreadsheets/d/e/2PACX-1vSwC0uR5u8fDY7MwScR003F5xPQf99bMnuUzWutW4UqFE1pKiSF6D4MY38fn-n2LA/pubhtml?widget=true&amp;headers=false"></iframe>
 </div>
+<% if Rails.env.production? %>
+    <script>
+        gtag('view_item', 'Tele Psychologists');
+    </script>
+<% end %>

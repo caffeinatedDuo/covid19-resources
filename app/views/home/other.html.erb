@@ -23,3 +23,8 @@
   text-decoration: underline;
 }
 </style>
+<% if Rails.env.production? %>
+  <script>
+      gtag('view_item', 'Other Links');
+  </script>
+<% end %>

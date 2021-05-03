@@ -2,3 +2,8 @@
     <h1 class="mt-5 mx-3">List of Tele Nutrionists available</h1>
     <iframe src="https://docs.google.com/spreadsheets/d/e/2PACX-1vT18RUcgehlVqG5zYuCOHYbbM6eJCIa5-DsHgFNPnD8kux8HUcV7fjOsEN3EUQTXQ/pubhtml?widget=true&amp;headers=false"></iframe>
 </div>
+<% if Rails.env.production? %>
+    <script>
+        gtag('view_item', 'Tele Nutrionists');
+    </script>
+<% end %>

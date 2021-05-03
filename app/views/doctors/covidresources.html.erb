@@ -2,3 +2,8 @@
     <h1 class="mt-5 mx-3">List of Covid Resources Volunteers available</h1>
     <iframe src="https://docs.google.com/spreadsheets/d/e/2PACX-1vQlxIa2Z7gr3xl31BVQ7nhSWRw9Dfutu033F7st_2JWKD5EdqPpLMnGCbgTexACTg/pubhtml?widget=true&amp;headers=false"></iframe>
 </div>
+<% if Rails.env.production? %>
+    <script>
+        gtag('view_item', 'Covid Resources');
+    </script>
+<% end %>

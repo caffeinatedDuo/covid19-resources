@@ -16,22 +16,22 @@
         </p>
         <br><br>
         <div class="button-wrapper">
-            <span class="profile-wrapper">
+            <a href="https://ajha.life?source=telecov.in" class="profile-wrapper">
                 <%= image_tag("abhishek.jpg", class: "avatar", alt: "Abhishek Jha",) %>
                 <label>Abhishek Jha</label>
-            </span>
-            <span class="profile-wrapper">
+            </a>
+            <a href="https://www.facebook.com/tannujae.tridib" class="profile-wrapper">
                 <%= image_tag("tanuja.jpg", class: "avatar", alt: "Tanuja Tridib",) %>
                 <label>Tannujae Tridib</label>
-            </span>
-            <span class="profile-wrapper">
+            </a>
+            <a href="https://www.facebook.com/sahil.likhar" class="profile-wrapper">
                 <%= image_tag("sahil.jpg", class: "avatar", alt: "Sahil Likhar",) %>
                 <label>Sahil Likhar</label>
-            </span>
-            <span class="profile-wrapper">
+            </a>
+            <a href="https://maniac-tech.com/?source=telecov.in" class="profile-wrapper">
                 <%= image_tag("jain.jpg", class: "avatar", alt: "Abhishek Jain",) %>
                 <label>Abhishek Jain</label>
-            </span>
+            </a>
         </div>
         <br><br>
         <p>
@@ -67,6 +67,7 @@
         align-items: center;
         row-gap: 10px;
         column-gap: 10px;
+        cursor: pointer;
     }
     .button-wrapper {
         max-width: 500px;
@@ -78,4 +79,10 @@
         }
     }
 </style>
+<% if Rails.env.production? %>
+    <script>
+        gtag('view_item', 'About Us');
+    </script>
+<% end %>
+
 
