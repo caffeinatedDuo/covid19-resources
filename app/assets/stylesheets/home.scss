@@ -4,6 +4,7 @@
 
 .d-block {
     max-height: 500px !important;
+    height: 500px;
     object-fit: contain;
     // background-color: aqua;
 }
@@ -109,4 +110,13 @@ ul.custom >:last-child {padding-bottom: 24px !important;}
 
 .card-button:hover, .card-link:hover {
     opacity: 0.7;
+}
+
+@media screen and (max-width: 640px) {
+    .d-block {
+        min-height: 200px !important;
+        height: 200px;
+        object-fit: contain;
+        // background-color: aqua;
+    }
 }
