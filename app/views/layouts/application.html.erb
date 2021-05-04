@@ -50,9 +50,10 @@
 
       <script>
         Sentry.init({
+          autoSessionTracking: true,
           dsn: "https://b109c713aacd4454965833ecff863b25@o557498.ingest.sentry.io/5689806",
-          release: "my-project-name@2.3.12",
-          integrations: [new Integrations.BrowserTracing()],
+          environment: 'production'
+          release: "telecov-1.0",
           tracesSampleRate: 1.0,
         });
       </script>
