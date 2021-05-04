@@ -17,4 +17,12 @@ Rails.application.routes.draw do
   get "tele-nutrionists", to: "doctors#nutrionists"
   get "tele-psychologists", to: "doctors#psychologists"
   get "covid-resources", to: "doctors#covidresources"
+  
+  # Authenticated Pages
+  get    '/login',   to: 'sessions#new'
+  post   '/login',   to: 'sessions#create'
+  delete '/logout',  to: 'sessions#destroy'
+
+  get '/dashboard', to: 'users#new'
+  resources :users
 end
