@@ -34,6 +34,19 @@ ul.custom >:last-child {padding-bottom: 24px !important;}
     align-items: center;
     justify-content: center;
 }
+.links-wrapper {
+    display: flex;
+    max-width: 100%;
+    flex-wrap: wrap;
+    margin: 0 auto;
+    row-gap: 22px;
+    column-gap: 22px;
+    padding: 10px;
+    justify-content: center;
+}
+.links-wrapper > span {
+    width: 300px;
+}
 .intro-wrapper {
     max-width: 550px;
     text-align: center;
