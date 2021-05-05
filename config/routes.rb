@@ -23,6 +23,6 @@ Rails.application.routes.draw do
   post   '/login',   to: 'sessions#create'
   delete '/logout',  to: 'sessions#destroy'
 
-  get '/dashboard', to: 'users#new'
+  get '/dashboard', to: 'dashboard#new'
   resources :users
 end
