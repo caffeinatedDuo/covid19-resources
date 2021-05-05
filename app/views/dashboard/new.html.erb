@@ -1,1 +1,12 @@
 <p>This is an Auth secure Page </p>
+
+<%# <form method="post" action="/logout" id="dashboardLogoutForm">
+<input type="submit" value="logout">
+</form> %>
+
+<%= form_tag("/logout", :method => "post") do %>
+
+   <%= submit_tag("Search") %>
+<% end %>
+
+<p> End</p>

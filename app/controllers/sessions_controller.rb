@@ -15,8 +15,9 @@ class SessionsController < ApplicationController
       render 'new'
     end
   end
-
+  
   def destroy
+    Rails.logger.info "Deleting User session"
     log_out
     redirect_to root_url
   end

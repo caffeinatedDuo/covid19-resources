@@ -21,7 +21,7 @@ Rails.application.routes.draw do
   # Authenticated Pages
   get    '/login',   to: 'sessions#new'
   post   '/login',   to: 'sessions#create'
-  delete '/logout',  to: 'sessions#destroy'
+  post '/logout',  to: 'sessions#destroy'
 
   get '/dashboard', to: 'dashboard#new'
   resources :users
