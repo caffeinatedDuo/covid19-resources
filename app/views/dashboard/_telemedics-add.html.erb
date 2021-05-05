@@ -1,0 +1,29 @@
+<h1>Add Telemedic</h1>
+
+<%= form_tag("/telemedics", :method => "post") do |form| %>
+  <%= label_tag "Doctor's Name" %>
+  <%= text_field_tag 'doctors-name', nil, placeholder: 'Enter Doctor\'s Name...' %>
+  <br>
+  
+  <%= label_tag "Contact No" %>
+  <%= text_field_tag 'contact-no', nil, placeholder: 'Enter Contact Number...' %>
+  <br>
+
+  <%= label_tag "Timings" %>
+  <%= text_field_tag 'timing', nil, placeholder: 'Enter Timing' %>
+  <br>
+  
+  <%= label_tag "Verification Status" %>
+  <%= select_tag "verification-status", raw("<option>1</option><option>2</option><option>3</option><option>4</option>") %>
+  <br>
+  
+  <%= label_tag "Functional Status" %>
+  <%= select_tag "functional-status", raw("<option>1</option><option>2</option><option>3</option><option>4</option>") %>
+  <br>
+  
+  <%= label_tag "Location" %>
+  <%= text_field_tag 'location', nil, placeholder: 'Enter Location...' %>
+  <br>  
+  
+  <%= submit_tag("Save Doctor") %>
+<% end %>
