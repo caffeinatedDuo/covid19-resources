@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Dashboard</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta property="og:title" content="COVID19 Resources India">
+    <meta property="og:description" content="List of all the doctors,telemedics,oxygen related data. Please share forward to help someone in need ">
+    <meta property="og:image" content="https://i.ibb.co/4FLFN9W/image-1.png">
+    <meta property="og:url" content="https://covid19-resources-india.herokuapp.com/">
+    <meta name="twitter:title" content="COVID19 Resources India ">
+    <meta name="twitter:description" content="List of all the doctors,telemedics,oxygen related data. Please share forward to help someone in need ">
+    <meta name="twitter:image" content=" https://i.ibb.co/T82d6jG/image-1.jpg">
+    <link rel="apple-touch-icon" sizes="180x180" href="<%= asset_path("apple-touch-icon.png")%>">
+    <link rel="icon" type="image/png" sizes="32x32" href="<%=asset_path("favicon-32x32.png")%>">
+    <link rel="icon" type="image/png" sizes="16x16" href="<%=asset_path("favicon-16x16.png")%>">
+    <link rel="manifest" href="<%=asset_path("site.webmanifest")%>">
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+    <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-CVJ4C31TYQ"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      
+      gtag('config', 'G-CVJ4C31TYQ');
+    </script>
+    <!-- Hotjar Tracking Code for www.telecov.in -->
+    <% if Rails.env.production? %>
+      <script>
+          (function(h,o,t,j,a,r){
+              h.hj=h.hj||function(){(h.hj.q=h.hj.q||[]).push(arguments)};
+              h._hjSettings={hjid:2383711,hjsv:6};
+              a=o.getElementsByTagName('head')[0];
+              r=o.createElement('script');r.async=1;
+              r.src=t+h._hjSettings.hjid+j+h._hjSettings.hjsv;
+              a.appendChild(r);
+          })(window,document,'https://static.hotjar.com/c/hotjar-','.js?sv=');
+      </script>
+      <!-- Sentry -->
+      <script
+        src="https://browser.sentry-cdn.com/6.3.5/bundle.min.js"
+        integrity="sha384-qBgjc56ljouxNiUODXpsqJSZ7mGL+PcExG0in9vErnovL9TPZwHxfnved8g6bzfM"
+        crossorigin="anonymous"
+      ></script>
+
+      <script>
+        Sentry.init({
+          autoSessionTracking: true,
+          dsn: "https://b109c713aacd4454965833ecff863b25@o557498.ingest.sentry.io/5689806",
+          environment: 'production',
+          release: "telecov-1.0",
+          tracesSampleRate: 1.0,
+        });
+      </script>
+    <% end %>
+  </head>
+  <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+    <a class="navbar-brand" href="/">Tele Cov</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    
+    
+  </nav>
+  <body>
+    <%= yield %>
+    <footer class="footer">
+      <p class="m-0">Made with <span class="heart">♥</span> in India</p>
+    </footer>
+    <% if Rails.env.production? %>
+      <script>
+        gtag('config', 'G-CVJ4C31TYQ');
+      </script>
+    <% end %>
+    <script async src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script async src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    
+    <script async src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>  
+  </body>
+</html>
