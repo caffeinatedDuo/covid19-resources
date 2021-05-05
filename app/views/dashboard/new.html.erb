@@ -1,12 +1,44 @@
-<p>This is an Auth secure Page </p>
+<main>
+  <div class="sidebar">
+    <a>Telemedic - View All</a>
+    <a>Telemedics - Add New</a>
+    <a>Telemedic - Update</a>
+  </div>
+  <div class="dashboard-content">
+    <%# Telemedics Section %>
+    <div class="telemedics-section">
+    telemedis Section :)
+    <%= render "telemedics-view" %>
+    <%= render "telemedics-add" %>
+    <%= render "telemedics-update" %>
+    </div>
+    <p>This is an Auth secure Page </p>
+    <%= form_tag("/logout", :method => "post") do %>
 
-<%# <form method="post" action="/logout" id="dashboardLogoutForm">
-<input type="submit" value="logout">
-</form> %>
+        <%= submit_tag("Logout") %>
+    <% end %>
+  </div>
+</main>
+<style>
+  .sidebar, .dashboard-content{
+    height: 100%;
+    padding: 10px;
+  }
+  .sidebar {
+    background-color: black;
+    color: white;
+    float: left;
+    height: 100%;
+    width: 20%;
+  }
 
-<%= form_tag("/logout", :method => "post") do %>
+  .sidebar a {
+    display: block;
+    width: 100%;
+  }
 
-   <%= submit_tag("Logout") %>
-<% end %>
-
-<p> End</p>
+  .dashboard-content{
+    float:right;
+    width: 80%;
+  }
+</style>
