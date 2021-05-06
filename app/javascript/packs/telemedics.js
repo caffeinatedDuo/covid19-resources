@@ -34,6 +34,7 @@ function handleAddTelemedicsFormSubmit(){
     processData: false,
     type: 'POST',
     url: '/telemedics',
+    // TO-DO: Add Success and failue Cases
   });
 }
 

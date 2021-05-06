@@ -16,6 +16,7 @@ class DashboardController < ApplicationController
     new_telemedics_record = Telemedic.create(name: doctors_name, contact: contact_no, timings: timings, verified: verification_status, functional: functional_status, location: location)
     new_telemedics_record.save
 
+    # TO-DO: handle non-200 cases
     render json: {message: "OK"}
     Rails.logger.info("doctors_name")
   end
