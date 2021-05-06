@@ -3,4 +3,11 @@ class DashboardController < ApplicationController
 
   def new
   end
+
+  def addTelemedic
+    Rails.logger.info("addTelemedic")
+    doctors_name = params["doctors-name"]
+    Rails.logger.info(doctors_name)
+    Rails.logger.info("doctors_name")
+  end
 end

@@ -1,0 +1,2 @@
+class Telemedic < ApplicationRecord
+end

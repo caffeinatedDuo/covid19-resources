@@ -10,7 +10,20 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_05_05_184156) do
+ActiveRecord::Schema.define(version: 2021_05_06_182935) do
+
+  create_table "telemedics", charset: "utf8", options: "ENGINE=InnoDB ROW_FORMAT=DYNAMIC", force: :cascade do |t|
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.string "name"
+    t.string "contact"
+    t.string "timings"
+    t.string "text_only"
+    t.string "verified"
+    t.string "functional"
+    t.string "data_check_passed"
+    t.string "location"
+  end
 
   create_table "user_tables", charset: "utf8", options: "ENGINE=InnoDB ROW_FORMAT=DYNAMIC", force: :cascade do |t|
     t.string "name"
