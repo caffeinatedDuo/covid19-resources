@@ -1,29 +1,40 @@
 <h1>Add Telemedic</h1>
 
-<%= form_tag("/telemedics", :method => "post") do |form| %>
-  <%= label_tag "Doctor's Name" %>
-  <%= text_field_tag 'doctors-name', nil, placeholder: 'Enter Doctor\'s Name...' %>
+<form id="add-telemedics-form" >
+  <input type="hidden" name="authenticity_token" value="rwNy0L1njvWARf4wvJ3VO2EtKfctXhXqbvDF08x6c2B_86vlJ4ViTe2D1m_4s4BZs0Eyhhh8MYnYRsHZiVwZSg">
+  <label for="Doctor_s_Name">Doctor's name</label>
+  <input type="text" name="doctors-name" id="asd" placeholder="Enter Doctor's Name...">
   <br>
   
-  <%= label_tag "Contact No" %>
-  <%= text_field_tag 'contact-no', nil, placeholder: 'Enter Contact Number...' %>
+  <label for="Contact_No">Contact no</label>
+  <input type="text" name="contact-no" id="contact-no" placeholder="Enter Contact Number...">
   <br>
 
-  <%= label_tag "Timings" %>
-  <%= text_field_tag 'timing', nil, placeholder: 'Enter Timing' %>
+  <label for="Timings">Timings</label>
+  <input type="text" name="timing" id="timing" placeholder="Enter Timing">
   <br>
   
-  <%= label_tag "Verification Status" %>
-  <%= select_tag "verification-status", raw("<option>1</option><option>2</option><option>3</option><option>4</option>") %>
+  <label for="Verification_Status">Verification status</label>
+  <select name="verification-status" id="verification-status">
+    <option>1</option>
+    <option>2</option>
+    <option>3</option>
+    <option>4</option>
+  </select>
   <br>
   
-  <%= label_tag "Functional Status" %>
-  <%= select_tag "functional-status", raw("<option>1</option><option>2</option><option>3</option><option>4</option>") %>
+  <label for="Functional_Status">Functional status</label>
+  <select name="functional-status" id="functional-status">
+    <option>1</option>
+    <option>2</option>
+    <option>3</option>
+    <option>4</option>
+  </select>
   <br>
   
-  <%= label_tag "Location" %>
-  <%= text_field_tag 'location', nil, placeholder: 'Enter Location...' %>
+  <label for="Location">Location</label>
+  <input type="text" name="location" id="location" placeholder="Enter Location...">
   <br>  
   
-  <%= submit_tag("Save Doctor") %>
-<% end %>
+  <input type="submit" name="commit" value="Save Doctor" data-disable-with="Save Doctor">
+</form>
