@@ -8,6 +8,8 @@ class DashboardController < ApplicationController
     Rails.logger.info("addTelemedic")
     doctors_name = params["doctors-name"]
     Rails.logger.info(doctors_name)
+    new_telemedics_record = Telemedic.create(name: doctors_name)
+    new_telemedics_record.save
     Rails.logger.info("doctors_name")
   end
 end

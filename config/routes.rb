@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  # resources :telemedics
   get 'oxygen_dealers/index'
   get 'doctors/index'
   # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
@@ -19,10 +20,11 @@ Rails.application.routes.draw do
   get "covid-resources", to: "doctors#covidresources"
   
   # Authenticated Pages
-  get    '/login',   to: 'sessions#new'
-  post   '/login',   to: 'sessions#create'
+  get '/login',   to: 'sessions#new'
+  post '/login',   to: 'sessions#create'
   post '/logout',  to: 'sessions#destroy'
 
   get '/dashboard', to: 'dashboard#new'
+  post '/telemedics', to: 'dashboard#addTelemedic'
   resources :users
 end
