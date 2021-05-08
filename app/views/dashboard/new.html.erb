@@ -7,7 +7,7 @@
   <div class="dashboard-content">
     <%# Telemedics Section %>
     <div class="telemedics-section">
-    <%# <%= render "telemedics-view" %>
+    <%= render "telemedics-view" %>
     <%= render "telemedics-add" %>
     <%# <%= render "telemedics-update" %>
     </div>
@@ -17,34 +17,3 @@
     <% end %>
   </div>
 </main>
-
-<style>
-  body{ 
-    /* TO-DO: Move this to root style */
-    height:100vh;
-  }
-  main{
-    height: 100%;
-    overflow:auto;
-  }
-  .sidebar, .dashboard-content{
-    height: 100%;
-    padding: 10px;
-  }
-  .sidebar {
-    background-color: black;
-    color: white;
-    float: left;
-    width: 20%;
-  }
-
-  .sidebar a {
-    display: block;
-    width: 100%;
-  }
-
-  .dashboard-content{
-    float:right;
-    width: 80%;
-  }
-</style>

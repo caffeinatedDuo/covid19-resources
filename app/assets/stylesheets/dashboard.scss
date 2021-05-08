@@ -1,3 +1,32 @@
 // Place all the styles related to the Dashboard controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: https://sass-lang.com/
+
+body { 
+  /* TO-DO: Move this to root style */
+  height:100vh;
+}
+main{
+  height: 100%;
+  overflow:auto;
+}
+.sidebar, .dashboard-content{
+  height: 100%;
+  padding: 10px;
+}
+.sidebar {
+  background-color: black;
+  color: white;
+  float: left;
+  width: 20%;
+}
+
+.sidebar a {
+  display: block;
+  width: 100%;
+}
+
+.dashboard-content{
+  float:right;
+  width: 80%;
+}
