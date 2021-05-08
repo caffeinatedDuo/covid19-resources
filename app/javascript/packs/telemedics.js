@@ -1,15 +1,21 @@
+var $addTelemedicsForm;
 var $addTelemedicsDoctorsName;
 var $addTelemedicsContactNo;
 var $addTelemedicstiming;
 var $addTelemedicsVerificationStatus;
 var $addTelemedicsFunctionalStatus;
 var $addTelemedicsLocation;
+var $updateTelemedicsID;
+
+var $loaderOverlay;
+var $savingLoader;
 
 function telemedicsInit(){
   uiBindings();
 }
 
 function uiBindings(){
+  $addTelemedicsForm = $('#telemedics-form__add-new');
   $addTelemedicsDoctorsName = $('#doctors-name');
   $addTelemedicsContactNo = $('#contact-no');
   $addTelemedicstiming = $('#timing');
@@ -17,9 +23,23 @@ function uiBindings(){
   $addTelemedicsFunctionalStatus = $('#functional-status');
   $addTelemedicsLocation = $('#location');
   $updateTelemedicsID = $('#update-telemedics-entry-id');
+  $loaderOverlay = $('.loader__overlay');
+  $savingLoader = $('.loader__saving');
+
+  $('#telemedics-form__add-new').on('submit', function (e) {
+    e.preventDefault();
+    handleAddTelemedicsFormSubmit();
+  });
+
+  $('#telemedics-form__update-new').on('submit', function (e) {
+    e.preventDefault();
+    handleUpdateTelemedicsFormSubmit();
+  });
 }
 
 function handleAddTelemedicsFormSubmit(){
+  showSavingLoader(true);
+
   var formData = new FormData();
   formData.append('doctors-name',$addTelemedicsDoctorsName[0].value);
   formData.append('contact-no', $addTelemedicsContactNo[0].value);
@@ -36,6 +56,13 @@ function handleAddTelemedicsFormSubmit(){
     type: 'POST',
     url: '/telemedics',
     // TO-DO: Add Success and failue Cases
+    success: function () {
+      alert('Successfully Added the Entry!');
+      showSavingLoader(false);
+    },
+    error: function(){
+      alert('Raise Sentry Error!');
+    }
   });
 }
 
@@ -57,17 +84,24 @@ function handleUpdateTelemedicsFormSubmit(){
     type: 'POST',
     url: '/dashboard/updateTelemedic',
     // TO-DO: Add Success and failue Cases
+    success: function () {
+      alert('Successfully Added the Entry!');
+      showSavingLoader(false);
+    },
+    error: function () {
+      alert('Raise Sentry Error!');
+    }
   });
 }
 
-$('#telemedics-form__add-new').on('submit', function(e){
-  e.preventDefault();
-  handleAddTelemedicsFormSubmit();
-});
-
-$('#telemedics-form__update-new').on('submit', function(e){
-  e.preventDefault();
-  handleUpdateTelemedicsFormSubmit();
-});
+function showSavingLoader(toShow){
+  if (toShow){
+    $savingLoader.removeClass('hide');
+    $loaderOverlay.removeClass('hide');
+  } else {
+    $savingLoader.addClass('hide');
+    $loaderOverlay.addClass('hide');
+  }
+}
 
 telemedicsInit();
