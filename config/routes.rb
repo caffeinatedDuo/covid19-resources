@@ -27,6 +27,8 @@ Rails.application.routes.draw do
   get '/dashboard', to: 'dashboard#new'
   get '/dashboard/telemedics', to: 'dashboard#viewTelemedic'
   get '/dashboard/addTelemedic', to: 'dashboard#addTelemedic'
+  get '/dashboard/updateTelemedic', to: 'dashboard#updateViewTelemedic'
+  post '/dashboard/updateTelemedic', to: 'dashboard#updateTelemedic'
   post '/telemedics', to: 'dashboard#createTelemedic'
   resources :users
 end

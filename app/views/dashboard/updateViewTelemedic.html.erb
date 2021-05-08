@@ -1,0 +1,55 @@
+<main>
+  <%= render 'sidebar' %>
+  <div class="dashboard-content">
+    <div class="telemedics-section">
+      <div class="new-page__telemedics__update">
+        <h1>UpdateTelemedic Doctor</h1>
+        <form id="telemedics-form__update-new" class="telemedics-form__update-new">
+          <p> Lorem ipsum dolor sit amet consectetur adipisicing elit. Beatae quidem architecto qui autem laboriosam delectus veniam aliquam quia dolore voluptatem provident accusamus vero eum, officiis numquam voluptatum ad suscipit praesentium. </p>
+
+          <input type="hidden" name="authenticity_token" value="rwNy0L1njvWARf4wvJ3VO2EtKfctXhXqbvDF08x6c2B_86vlJ4ViTe2D1m_4s4BZs0Eyhhh8MYnYRsHZiVwZSg">
+          <input type="hidden" name="doctor-id" id="update-telemedics-entry-id" value=<%= @toEditTelemedicData.id%>>
+          <div class="form-elements">
+            <div class="telemedics-form__input-container">
+              <label for="Doctor_s_Name">Doctor's name</label><br>
+              <input type="text" name="doctors-name" id="doctors-name" value="<%= @toEditTelemedicData.name%>">
+            </div>
+
+            <div class="telemedics-form__input-container">
+              <label for="Contact_No">Contact no</label><br>
+              <input type="text" name="contact-no" id="contact-no" value="<%= @toEditTelemedicData.contact%>">
+            </div>
+
+            <div class="telemedics-form__input-container">
+              <label for="Timings">Timings</label><br>
+              <input type="text" name="timing" id="timing" value="<%= @toEditTelemedicData.timings%>">
+            </div>
+
+            <div class="telemedics-form__input-container">
+              <label for="Location">Location</label><br>
+              <input type="text" name="location" id="location" value="<%= @toEditTelemedicData.location%>">
+            </div>
+
+            <div class="telemedics-form__input-container">
+              <label for="Verification_Status">Verification status</label><br>
+              <select name="verification-status" id="verification-status">
+                <option>Verified</option>
+                <option>Not Verified</option>
+              </select>
+            </div>
+
+            <div class="telemedics-form__input-container">
+              <label for="Functional_Status">Functional status</label><br>
+              <select name="functional-status" id="functional-status">
+                <option>Active</option>
+                <option>Inactive</option>
+              </select>
+            </div>
+          </div>
+          <br>
+          <input type="submit" name="commit" value="Update Doctor" data-disable-with="Save Doctor">
+        </form>
+      </div>
+    </div>
+  </div>
+</main>

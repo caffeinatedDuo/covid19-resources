@@ -4,6 +4,7 @@
     <%# Telemedics Section %>
     <div class="telemedics-section">
       <div class="new-page__telemedics__view">
+        <h1>List of all Telemedic Doctors</h1>
         <table border=1>
           <tr>
             <td>Name</td>
@@ -29,6 +30,8 @@
               <td> <%= telemedicEntry.functional %> </td>
               <td> <%= telemedicEntry.data_check_passed %> </td>
               <td> <%= telemedicEntry.location %> </td>
+              <td><a href="/dashboard/updateTelemedic?id=<%= telemedicEntry.id%>"> Update </a></td>
+              </tr>
           <% end %>
         </table>
       </div>

@@ -16,6 +16,7 @@ function uiBindings(){
   $addTelemedicsVerificationStatus = $('#verification-status');
   $addTelemedicsFunctionalStatus = $('#functional-status');
   $addTelemedicsLocation = $('#location');
+  $updateTelemedicsID = $('#update-telemedics-entry-id');
 }
 
 function handleAddTelemedicsFormSubmit(){
@@ -38,9 +39,35 @@ function handleAddTelemedicsFormSubmit(){
   });
 }
 
+function handleUpdateTelemedicsFormSubmit(){
+  var formData = new FormData();
+  formData.append('doctors-name', $addTelemedicsDoctorsName[0].value);
+  formData.append('contact-no', $addTelemedicsContactNo[0].value);
+  formData.append('timing', $addTelemedicstiming[0].value);
+  formData.append('verification-status', $addTelemedicsVerificationStatus[0].value);
+  formData.append('functional-status', $addTelemedicsFunctionalStatus[0].value);
+  formData.append('location', $addTelemedicsLocation[0].value);
+  formData.append('id', $updateTelemedicsID[0].value);
+
+  $.ajax({
+    beforeSend: function (xhr) { xhr.setRequestHeader('X-CSRF-Token', $('meta[name="csrf-token"]').attr('content')) },
+    contentType: false,
+    data: formData,
+    processData: false,
+    type: 'POST',
+    url: '/dashboard/updateTelemedic',
+    // TO-DO: Add Success and failue Cases
+  });
+}
+
 $('#telemedics-form__add-new').on('submit', function(e){
   e.preventDefault();
   handleAddTelemedicsFormSubmit();
+});
+
+$('#telemedics-form__update-new').on('submit', function(e){
+  e.preventDefault();
+  handleUpdateTelemedicsFormSubmit();
 });
 
 telemedicsInit();
