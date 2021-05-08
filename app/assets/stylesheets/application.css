@@ -1,54 +1,57 @@
 /*
- * This is a manifest file that'll be compiled into application.css, which will include all the files
- * listed below.
- *
- * Any CSS and SCSS file within this directory, lib/assets/stylesheets, or any plugin's
- * vendor/assets/stylesheets directory can be referenced here using a relative path.
- *
- * You're free to add application-wide styles to this file and they'll appear at the bottom of the
- * compiled file so the styles you add here take precedence over styles defined in any other CSS/SCSS
- * files in this directory. Styles in this file should be added after the last require_* statement.
- * It is generally better to create a new file per style scope.
- *
- *= require_tree .
- *= require_self
- */
- .center {
-    display: flex;
-    max-width: 1400px;
-    height: 100%;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    margin: 0 auto;
+* This is a manifest file that'll be compiled into application.css, which will include all the files
+* listed below.
+*
+* Any CSS and SCSS file within this directory, lib/assets/stylesheets, or any plugin's
+* vendor/assets/stylesheets directory can be referenced here using a relative path.
+*
+* You're free to add application-wide styles to this file and they'll appear at the bottom of the
+* compiled file so the styles you add here take precedence over styles defined in any other CSS/SCSS
+* files in this directory. Styles in this file should be added after the last require_* statement.
+* It is generally better to create a new file per style scope.
+*
+*= require_tree .
+*= require_self
+*/
+.center {
+  display: flex;
+  max-width: 1400px;
+  height: 100%;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto;
+}
+.hide {
+  display: none;
 }
 iframe {
-    width: 1024px;
-    height: 700px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
+  width: 1024px;
+  height: 700px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
 }
 @media screen and (max-width: 640px) {
-    iframe {
-        width: 95%;
-        height: 550px;
-        margin: 0 20px;
-    }
+  iframe {
+    width: 95%;
+    height: 550px;
+    margin: 0 20px;
+  }
 }
 body {
-    background-color:#dbe6f4 !important;
+  background-color:#dbe6f4 !important;
 }
 .footer {
-    width: 100%;
-    background-color: #197dffc4;
-    color: white;
-    text-align: center;
-    height: 60px;
-    margin-top: 60px;
-    display: flex;
-    align-items: center;
-    font-weight: bolder;
-    font-size: 18px;
-    justify-content: center;
+  width: 100%;
+  background-color: #197dffc4;
+  color: white;
+  text-align: center;
+  height: 60px;
+  margin-top: 60px;
+  display: flex;
+  align-items: center;
+  font-weight: bolder;
+  font-size: 18px;
+  justify-content: center;
 }
 .heart{color:#e25555;font-size: 20px;}
