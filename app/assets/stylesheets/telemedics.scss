@@ -15,7 +15,8 @@ $small: 640px;
   }
 
   .telemedics-form {
-    &__add-new{
+    &__add-new,
+    &__update-new {
       .form-elements{
         align-items: center;
         display: flex;
