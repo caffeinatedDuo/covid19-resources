@@ -4,24 +4,56 @@
 
 $small: 640px;
 
-.center {
-    display: flex;
-    max-width: 1400px;
-    height: 100%;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    margin: 0 auto;
-}
-iframe {
-    width: 1024px;
-    height: 700px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
+.telemedics-section{
+  font-family: 'Roboto', sans-serif !important;
 
-    @media screen and (max-width: $small) {
-        width: 95%;
-        height: 550px;
-        margin: 0 20px;
+  // Add Telemedics Section
+  .new-page__telemedics__add {
+    background-color: white;
+    padding: 20px;
+  }
+
+  .telemedics-form {
+    &__add-new{
+      .form-elements{
+        align-items: center;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        max-width: 420px;
+      }
     }
+    &__input-container {
+      max-width: 250px;
+      
+      label {
+        font-weight: 500;
+      }
+    }
+  }
+  // ----------------------
+}
+
+.center {
+  display: flex;
+  max-width: 1400px;
+  height: 100%;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto;
+}
+
+iframe {
+  width: 1024px;
+  height: 700px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  
+  @media screen and (max-width: $small) {
+    width: 95%;
+    height: 550px;
+    margin: 0 20px;
+  }
 }

@@ -7,17 +7,17 @@
   <div class="dashboard-content">
     <%# Telemedics Section %>
     <div class="telemedics-section">
-    telemedis Section :)
     <%# <%= render "telemedics-view" %>
     <%= render "telemedics-add" %>
     <%# <%= render "telemedics-update" %>
     </div>
-    <p>This is an Auth secure Page </p>
+
     <%= form_tag("/logout", :method => "post") do %>
         <%= submit_tag("Logout") %>
     <% end %>
   </div>
 </main>
+
 <style>
   body{ 
     /* TO-DO: Move this to root style */

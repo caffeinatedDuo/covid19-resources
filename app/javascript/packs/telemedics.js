@@ -38,7 +38,7 @@ function handleAddTelemedicsFormSubmit(){
   });
 }
 
-$('#add-telemedics-form').on('submit', function(e){
+$('#telemedics-form__add-new').on('submit', function(e){
   e.preventDefault();
   handleAddTelemedicsFormSubmit();
 });
