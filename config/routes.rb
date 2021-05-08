@@ -25,6 +25,7 @@ Rails.application.routes.draw do
   post '/logout',  to: 'sessions#destroy'
 
   get '/dashboard', to: 'dashboard#new'
+  get '/dashboard/telemedics', to: 'dashboard#viewTelemedic'
   post '/telemedics', to: 'dashboard#addTelemedic'
   resources :users
 end

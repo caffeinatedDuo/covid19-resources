@@ -20,4 +20,8 @@ class DashboardController < ApplicationController
     render json: {message: "OK"}
     Rails.logger.info("doctors_name")
   end
+
+  def viewTelemedic
+    @telemedics = Telemedic.all
+  end
 end

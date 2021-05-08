@@ -1,0 +1,41 @@
+<main>
+  <div class="sidebar">
+    <a>Telemedic - View All</a>
+    <a>Telemedics - Add New</a>
+    <a>Telemedic - Update</a>
+  </div>
+  <div class="dashboard-content">
+    <%# Telemedics Section %>
+    <div class="telemedics-section">
+      <div class="new-page__telemedics__view">
+        <table border=1>
+          <tr>
+            <td>Name</td>
+            <td>Created At</td>
+            <td>Last Updated</td>
+            <td>Contact</td>
+            <td>Timings</td>
+            <td>Text Only</td>
+            <td>Verified</td>
+            <td>Functional</td>
+            <td>Data Check Passed</td>
+            <td>Location</td>
+          </tr>
+          <% @telemedics.each do | telemedicEntry | %>
+            <tr>
+              <td> <%= telemedicEntry.name %> </td>
+              <td> <%= telemedicEntry.created_at %> </td>
+              <td> <%= telemedicEntry.updated_at %> </td>
+              <td> <%= telemedicEntry.contact %> </td>
+              <td> <%= telemedicEntry.timings %> </td>
+              <td> <%= telemedicEntry.text_only %> </td>
+              <td> <%= telemedicEntry.verified %> </td>
+              <td> <%= telemedicEntry.functional %> </td>
+              <td> <%= telemedicEntry.data_check_passed %> </td>
+              <td> <%= telemedicEntry.location %> </td>
+          <% end %>
+        </table>
+      </div>
+    </div>
+  </div>
+</main>
