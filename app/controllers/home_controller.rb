@@ -7,4 +7,7 @@ class HomeController < ApplicationController
 
     def aboutus
     end
+
+    def donate
+    end
 end

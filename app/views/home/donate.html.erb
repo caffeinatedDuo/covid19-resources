@@ -1,0 +1,9 @@
+<div class="center">
+    <h1 class="mt-5 mx-3">List of Donations available</h1>
+    <iframe src="https://docs.google.com/spreadsheets/d/e/2PACX-1vRKUDlQyMTLp8bjJQ2ZCKK9AxVLXgK38SFBTYWmc_3AjiSkrxeUblOtd4eAo51Z6qGO_Fk0fFC90MAV/pubhtml?widget=true&amp;headers=false"></iframe>
+</div>
+<% if Rails.env.production? %>
+    <script>
+        gtag('view_item', 'Donate');
+    </script>
+<% end %>
