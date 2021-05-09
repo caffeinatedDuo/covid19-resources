@@ -12,6 +12,7 @@ Rails.application.routes.draw do
   get "telemedics", to: "telemedics#index"
   get "plasma", to: "plasma#index"
   get "other", to: "home#other"
+  get "donate", to: "home#donate"
   get "about-us", to: "home#aboutus"
   get "mission", to: "home#mission"
   get "tele-nutrionists", to: "doctors#nutrionists"
